@@ -16,5 +16,6 @@ def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
   
-  array[array.index{|c| c.include?("cheddar" || "gouda" || "camembert")}]
+  has_cheese = array[array.index{|c| c.include?("cheddar" || "gouda" || "camembert")}]
+  has_cheese.length > 2 ? return has_cheese : return nil
 end
